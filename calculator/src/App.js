@@ -6,11 +6,12 @@ import globalContext from './context/GlobalContext';
 import {useContext, useState} from "react";
 
 function App() {
-  const [digit, setDigit] = useState({disp: '0'})
+  const [digit, setDigit] = useState({disp: '0'});
+  const [bigNumber, setBigNumber] = useState({stored:" "});
 
   return (
     <div className="App">
-      <globalContext.Provider value={{digit, setDigit}}>
+      <globalContext.Provider value={{digit, setDigit, bigNumber, setBigNumber}}>
     <Calculator/>
     </globalContext.Provider>
     </div>

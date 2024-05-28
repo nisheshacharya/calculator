@@ -4,6 +4,7 @@ import globalContext from "../context/GlobalContext";
 
 function Keypad() {
   const { digit, setDigit } = useContext(globalContext);
+  const { bigNumber, setBigNumber } = useContext(globalContext);
   const [isResult, setIsResult] = useState(false);
   const numbers = [7, 8, 9, 4, 5, 6, 1, 2, 3, ".", "0", "←"];
 
@@ -52,15 +53,12 @@ function Keypad() {
 
   useEffect(() => {
     const handleKeyPress = (e) => {
-      console.log("e.key", e.key);
       if (acceptedKeys.includes(e.key)) {
         if (e.key === "Enter") {
-          console.log("e.target in ==", e.target ? "true" : "false");
           calculate();
         } else if (e.key === "Escape") {
           setDigit({ disp: "0" });
         } else if (e.key === "Backspace") {
-          console.log("Backspace clicked");
           setDigit((prevDigit) => ({
             disp: prevDigit.disp.length > 1 ? prevDigit.disp.slice(0, -1) : "0",
           }));
@@ -132,7 +130,6 @@ function Keypad() {
   const handleKeyPress = (e) => {
     e.target.blur();
     if (e.Keypad === "Enter") {
-      console.log("Enter pressed");
     }
   };
 
