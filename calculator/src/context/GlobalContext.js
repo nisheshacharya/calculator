@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { createContext } from "react";
 
 const globalContext = createContext({});

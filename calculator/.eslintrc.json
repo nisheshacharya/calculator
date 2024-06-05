@@ -1,0 +1,25 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+    "plugins": ["react"],
+    "parserOptions": {
+      "ecmaVersion": 2022, // Or your desired ECMAScript version
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true // Enable JSX parsing
+      }
+    },
+    "env": {
+      "browser": true, // If your project runs in the browser
+      "es2021": true, // Or your desired ECMAScript version environment
+      "jest": true
+    },
+    "rules": {
+        "react/react-in-jsx-scope": "off"
+    },
+    "settings": {
+      "react": {
+        "version": "detect" // Or specify a specific version like "18.0"
+      }
+    }
+  }
+  

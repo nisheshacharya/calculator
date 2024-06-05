@@ -1,4 +1,6 @@
-import { useContext, useEffect } from "react";
+/* eslint-disable prettier/prettier */
+/* eslint-disable react/react-in-jsx-scope */
+import { useContext } from "react";
 import globalContext from "../context/GlobalContext";
 
 function MainDisplay() {
@@ -6,7 +8,7 @@ function MainDisplay() {
 
   return (
     <div className="screen">
-      <p>{digit.disp}</p>
+      <span className="displayed-number">{digit.disp}</span>
     </div>
   );
 }

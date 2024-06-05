@@ -6,48 +6,57 @@
 }
 
 .calculator {
-  width: 150px;
-  border: solid black 2px;
+  width: 250px;
+  border: solid black 4px;
   border-radius: 10%;
   align-content: center;
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  padding: 10px;
+  margin: 30px;
+  padding: 15px;
+  background-color: rgb(231, 239, 248);
 }
 
 .non-zero {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 13.5px;
 }
 
 button {
   background-color: rgb(3, 54, 112);
   color: white;
   border-radius: 20%;
-  height: 30px;
-  width: 30px;
+  height: 45px;
+  width: 45px;
 }
 button:hover {
-  background-color: rgb(116, 192, 246);
+  background-color: rgb(10, 4, 75);
 }
+button:active {
+  border: 4px solid black;
+
+}
+
 .numberKey {
-background-color: rgb(70, 64, 55);
-color: wheat;
+background-color: rgb(100, 97, 97);
+color: rgb(255, 255, 255);
 }
 .numberKey:hover {
-  background-color: rgb(49, 44, 24);
+  background-color: rgb(70, 67, 67);
 }
 .math {
-  background-color: rgb(16, 111, 9);
+  background-color: rgb(35, 62, 112);
   color: white;
 }
 .math:hover {
-  background-color: rgb(4, 75, 28); 
+  background-color: rgb(10, 4, 75); 
 }
 .equal {
-  background-color: rgb(185, 130, 13);
+  background-color: rgb(4, 119, 11);
+}
+.equal:hover {
+  background-color: rgb(9, 96, 34);
 }
 
 .number-button-container {
@@ -59,8 +68,8 @@ color: wheat;
 .zero-line {
   display: flex;
   flex-direction: row;
-  margin-top: 5px;
-  gap: 10px;
+  margin-top: 8px;
+  gap: 16px;
 }
 
 .keypad {
@@ -72,18 +81,24 @@ color: wheat;
 
 .screen {
   align-self: center;
-  height: 40px;
-  width: 150px;
+  height: 60px;
+  width: 250px;
   border: 1px solid gray;
   border-radius: 10px;
   background-color: rgb(181, 198, 224); 
-  margin: 10px;
-  overflow:hidden;
+  margin: 20px;
+ text-align:center;
+  overflow-x: scroll;
+  font-size: larger;
 }
 
+.displayed-number {
+  text-align: center;
+  vertical-align: middle;
+}
 .other-button-container{
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
-  margin-left: 10px;
+  row-gap: 12.5px;
+  margin-left: 15px;
 }
