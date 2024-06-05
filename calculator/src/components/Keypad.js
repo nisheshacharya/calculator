@@ -89,7 +89,10 @@ function Keypad() {
         ((digit.disp.length === 1 && digit.disp[0] === '0') ||
           digit.disp === 'ERROR' ||
           isResult) &&
-        !operators.includes(e.target.value ? e.target.value : keyMap[e.key])
+        !operators.includes(e.target.value ? e.target.value : keyMap[e.key]) &&
+        e.target.value
+          ? e.target.value !== '.'
+          : keyMap[e.key] === '.'
       ) {
         setDigit({ disp: e.target.value ? e.target.value : keyMap[e.key] });
       } else {
